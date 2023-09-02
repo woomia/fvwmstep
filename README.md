@@ -23,6 +23,9 @@ Regressions:
 
 * You'll need wmclock for the Wharf, if you don't want it, you can use xclock instead:
 *Wharf(Swallow XClock 'Exec xclock -padding 0 -bg Grey75 -fg black &')
+
+* If you to want to break off and pin the root menu ala Window Maker add this to AfterStepClassic menu:
+"+			"Pin Menu" TearMenuOff	"
 -------------------------
 
 AfterStep Classic, like the original , is released under the GNU GPL Version 2 or, at your option, any later version.
