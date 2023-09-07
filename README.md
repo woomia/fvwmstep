@@ -1,4 +1,4 @@
-AfterStep Classic is the sucessor Afterstep Classic v1.1b2. This a configuration based on FVWM, or more simply put, it is a configuration for FVWM 2.6.x, but it is meant to be the next version AfterStep Classic.
+AfterStep Classic is the sucessor to Afterstep Classic v1.1b2. This a configuration based on FVWM, or more simply put, it is a configuration for FVWM 2.6.x, but it is meant to be the next version AfterStep Classic.
 
 AfterStep Classic 1.1b3  released: 08/27/2023
 
