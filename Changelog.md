@@ -1,3 +1,5 @@
+AfterStep Classic 1.1b3 released: 08/27/2023
+
 Changes since last release since beta 2 released 03/08/97:
 
 * Now based on FVWM 2.6.x. It may work on earlier versions, such as 2.5.x but not tested. It should also work on fvwm3, but also untested.
