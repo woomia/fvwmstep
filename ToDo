@@ -1,7 +1,7 @@
 ** This is a non-exhaustive list of to do items for the next release: **
 1. Upload updated FVWM2RC, this will include a newly resized Wharf. --Partially done. Still need to add AutoHide.
 2. Upload tiles, these tiles are the background to the Wharf buttons that make it more AfterStep-y -- DONE
-3. Upload the original tarballs of AfterStep Classic 1.1b1 and 1.1b2n -- DONE
+3. Upload the original tarballs of AfterStep Classic 1.1b1 and 1.1b2 -- DONE
 4. Find a way to autohide the Wharf like what was possible in 1.1b2 -- Can be done with AutoHide, it won't be enabled by default.
 5. Changelog updated for each release.
 Sometime in a mysterious future release:
