@@ -31,13 +31,14 @@ ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.icons
 #The Wharf
 ################
 Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
-*Wharf: Geometry 68x656-0+0
+*Wharf: Geometry 64x576-0+0
 *Wharf: Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 *Wharf: Rows 15
 *Wharf: Columns 1
 *Wharf: Back #bfbfbf
 *Wharf: Fore black
 *Wharf: BoxSize 64x64
+*Wharf: Pixmap tile.xpm
 
 *Wharf: (1x1 Icon 'AfterStep.xpm', \
 	Action(Mouse 1) 'Exec exec xterm' \
@@ -77,6 +78,7 @@ Style "xterm" 		IconOverride, Icon monitor.xpm
 Style "leafpad" 	IconOverride, Icon text.xpm
 Style "Mozilla Firefox" IconOverride, Icon netscape3.xpm
 Style "libreoffice" 	IconOverride, Icon libreoffice-writer.png
+Style "chromium"	IconOverride, Icon netscape3.xpm
 Style "pcmanfm"		IconOverride, Icon FileFolders.xpm
 Style *		  	IconSize 32x32
 Style Wharf		WindowListSkip
