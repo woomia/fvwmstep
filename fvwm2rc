@@ -25,7 +25,7 @@ AddToFunc InitFunction
 ################
 #Icon Paths. Seasons with your own.
 ################
-ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.icons
+ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.fvwm/icons
 
 ################
 #The Wharf
