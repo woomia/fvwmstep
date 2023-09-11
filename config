@@ -1,0 +1,213 @@
+#################
+#
+#FvwmStep aka AfterStepClassic-1.1b3
+#
+#################
+
+#################
+# This is for workspaces, I don't use them, but you can add them here. You can install wmpager and add it to the Wharf.
+# EdgeResistance, etc, put here in case you want to do this.
+#################
+EdgeResistance 250 10
+EdgeScroll 100 100
+ClickTime 750
+DeskTopSize 1x1
+
+################
+#Init functions
+################
+AddToFunc StartFunction
++ I Module FvwmButtons Wharf
+
+AddToFunc InitFunction
+ + I exec xsetroot -solid Steelblue4
+
+################
+#Icon Paths. Seasons with your own.
+################
+ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.fvwm/icons
+
+################
+#The Wharf
+################
+Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
+*Wharf: Geometry 64x576-0+0
+*Wharf: Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
+*Wharf: Rows 15
+*Wharf: Columns 1
+*Wharf: Back #bfbfbf
+*Wharf: Fore black
+*Wharf: BoxSize 64x64
+*Wharf: Pixmap tile.xpm
+
+*Wharf: (1x1 Icon 'AfterStep.xpm', \
+	Action(Mouse 1) 'Exec exec xterm' \
+)
+*Wharf: (Swallow(UseOld,NoHint,Respawn) "wmclock" `Exec wmclock -12`)
+)
+*Wharf: (1x1 Icon 'monitor.xpm',\
+	Action(Mouse 1) 'Exec exec xterm'\
+)
+*Wharf: (1x1 Icon 'text.xpm',\
+	Action(Mouse 1) 'Exec exec leafpad'\
+)
+*Wharf: (1x1 Icon 'netscape3.xpm', \
+	Action(Mouse 1) 'Exec exec firefox' \
+)
+*Wharf: (1x1 Icon 'libreoffice-writer.png', \
+	Action(Mouse 1) 'Exec exec lowriter' \
+)
+*Wharf: (1x1 Icon 'FileFolders.xpm', \
+	Action(Mouse 1) 'Exec exec pcmanfm' \
+)
+*Wharf: (1x1 Icon 'interface.xpm',\
+	Action(Mouse 1) 'Exec leafpad /home/chris/.fvwm2rc'
+)
+*Wharf: (1x1 Icon 'recycler.xpm', \
+	Action(Mouse 1) 'restart'
+#############
+# Default Styles. Make sure these fonts exist on your system:
+#############
+Style *           Font -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+Style *           IconFont -adobe-times-medium-r-*-*-8-*-*-*-*-*-*-*
+Style *           HilightFore White, HilightBack #000044
+Style *           IconBox 0 -10 -280 -1
+Style *		  ClickToFocus
+Style *           TileCascadePlacement
+Style "xterm" 		IconOverride, Icon monitor.xpm
+Style "leafpad" 	IconOverride, Icon text.xpm
+Style "Mozilla Firefox" IconOverride, Icon netscape3.xpm
+Style "libreoffice" 	IconOverride, Icon libreoffice-writer.png
+Style "chromium"	IconOverride, Icon netscape3.xpm
+Style "pcmanfm"		IconOverride, Icon FileFolders.xpm
+Style *		  	IconSize 32x32
+Style Wharf		WindowListSkip
+Style xconsole		WindowListSkip
+Style * DecorateTransient
+
+#############
+# This needs work to emulate AfterStep Classic 1.1b2
+#############
+MenuStyle * Foreground black, Background #bfbfbf, white
+MenuStyle * Font -adobe-times-bold-r-*-*-14-*-*-*-*-*-*-*
+MenuStyle * Hilight3DThickness 1
+MenuStyle * PopupOffset 0 100, TitleWarp
+MenuStyle * Animation, AutomaticHotkeysOff, DoubleClickTime
+MenuStyle * BorderWidth 2, SidePic, SideColor
+MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
+MenuStyle * VerticalItemSpacing, VerticalTitleSpacing
+
+##############
+# NeXTStep Decor
+##############
+DestroyDecor DefaultDecor
+AddToDecor DefaultDecor
++ ButtonStyle 1 \
+        ActiveUp     (Pixmap minimize-bevel-button.png -- Flat) \
+        ActiveDown   (Pixmap minimize-bevel-pressed.png -- Flat) \
+        Inactive     (Pixmap minimize-bevel-pressed.png -- Flat)
++ ButtonStyle 2 \
+        ActiveUp     (Pixmap close-bevel-button.png -- Flat) \
+        ActiveDown   (Pixmap close-bevel-pressed.png -- Flat) \
+        Inactive     (Pixmap close-bevel-pressed.png -- Flat)
++ TitleStyle -- Flat
+
++ BorderStyle Simple -- HiddenHandles NoInset
+
+
+Style * UseDecor DefaultDecor
+
+Mouse 1 1 A Iconify
+Mouse 1 2 A Close
+
+#############
+# Menus
+#############
+######################## Menus ###################
+AddToMenu RootMenu	"AfterStepClassic" Title
++			"XTerm"		Exec exec xterm -geometry 80x25 -sl 256 -sb -ls -T 'xterm@AfterStepClassic.org' 
++			"Firefox"	Exec exec firefox
++			"Leafpad"	Exec exec leafpad
++			"PictureViewer"	Exec exec gpicview
++			"Writer"	Exec exec lowriter
++			"Filemgr"	Exec exec pcmanfm	
++			"Exit ASClassic" Popup Quit-Verify
+
+AddToMenu Quit-Verify 	"Really Quit?" Title
++		      	"Yes, Really Quit"  Quit
++		      	""		    Nop
++                       "Restart ASClassic"  Restart
++		      	""		    Nop
++		      	"No, Don't Quit"    Nop
+
+############
+# Mouse functions
+############
+AddToFunc MailFunction	   I Next (AcceptsFocus $0) Iconify -1
++		           I Next (AcceptsFocus $0) Focus
++			   I None (AcceptsFocus $0) Exec $0 $1
+
+AddToFunc Move-or-Raise		I Raise
++				M Move
++  				D Lower
+
+AddToFunc Move-or-Raise2	M Raise
++				M Move
++  				D Lower
+
+AddToFunc Maximize-Func		M Maximize	 0 100
++				C Maximize	 0 80
++				D Maximize	 100 100
+
+AddToFunc Move-or-Iconify	I Raise
++				M Move
++				D Iconify
+
+AddToFunc Resize-or-Raise	I Raise
++				M Resize
++				D Lower
+
+AddToFunc Resize-or-Raise2	M Raise
++				M Resize
++				D Lower
+
+AddToFunc PrintFunction		I Raise
++				I Exec xdpr -id $w
+
+AddToFunc PrintReverseFunction  I Raise
++                               I Exec xdpr 1/2 -h -rv -id $w
+
+AddToFunc Iconify-and-Raise     I Iconify
++                               I Raise
+
+
+#   for the root window:
+Mouse 1	R   	A       Menu RootMenu Nop
+Mouse 2	R    	A      	Menu Window-Ops Nop
+Mouse 3	R    	A      	WindowList
+
+#   for other parts of the window/borders/icons:
+Mouse 1	F	A	Resize-or-Raise
+Mouse 1	TS	A	Move-or-Raise
+Mouse 1	I	A	Move-or-Iconify
+Mouse 2	I	A	Iconify
+Mouse 2	FST	A	Menu Window-Ops2 Nop
+Mouse 3	TSIF	A	RaiseLower
+
+##############
+# This sets up the square minimzed icons
+###############
+Colorset 5 bg rgb:a8/a8/a8
+Style * IconBackgroundColorset 5, IconBackgroundPadding 6, IconBackgroundRelief 2, IconTitleRelief 2
+
+##############
+#This should keep minimized icons packed between minimizes
+##############
+DestroyFunc DeiconifyAndRearrange
+ AddToFunc DeiconifyAndRearrange
+  + C Iconify off
+  + C All (CurrentPage, Iconic) PlaceAgain Icon
+
+
+
+
