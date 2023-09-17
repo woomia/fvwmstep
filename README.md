@@ -7,6 +7,7 @@ AfterStep Classic 1.1b3  released: 08/27/2023
 
 
 
-To use, simply download the tarball or clone from Github and put the files in .fvwm (or wherever you store your FVWM 2.6.x configuration).
+To use, simply download the tarball or clone from Github. Put the included icons where FVWM can find them, copy the config file to .fvwm and then restart FVWM. 
 
+After you restart FVWM you'll be in AfterStep Classic!
 
