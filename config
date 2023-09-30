@@ -23,7 +23,7 @@ AddToFunc InitFunction
  + I exec xsetroot -solid Steelblue4
 
 ################
-#Icon Paths. Seasons with your own.
+#Icon Paths. Season with your own.
 ################
 ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.fvwm/icons
 
@@ -89,7 +89,7 @@ Style * DecorateTransient
 # This needs work to emulate AfterStep Classic 1.1b2
 #############
 MenuStyle * Foreground black, Background #bfbfbf, white
-MenuStyle * Font -adobe-times-bold-r-*-*-14-*-*-*-*-*-*-*
+MenuStyle * Font -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
 MenuStyle * Hilight3DThickness 1
 MenuStyle * PopupOffset 0 100, TitleWarp
 MenuStyle * Animation, AutomaticHotkeysOff, DoubleClickTime
