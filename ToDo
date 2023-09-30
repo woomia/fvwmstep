@@ -4,6 +4,7 @@
 3. Upload the original tarballs of AfterStep Classic 1.1b1 and 1.1b2 -- DONE
 4. Find a way to autohide the Wharf like what was possible in 1.1b2 -- Can be done with AutoHide, it won't be enabled by default.
 5. Changelog updated for each release.
+6. Rename root menu to HotList like it was in AfterStep Classic 1.1b1 and b2 -- DONE
 Sometime in a mysterious future release:
 1. Fix the the root menu to be more like AfterStep Classic.
 2. Custom default wallpaper.
