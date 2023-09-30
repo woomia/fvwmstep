@@ -41,7 +41,7 @@ Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
 *Wharf: Pixmap tile.xpm
 
 *Wharf: (1x1 Icon 'AfterStep.xpm', \
-	Action(Mouse 1) 'Exec exec xterm' \
+
 )
 *Wharf: (Swallow(UseOld,NoHint,Respawn) "wmclock" `Exec wmclock -12`)
 )
