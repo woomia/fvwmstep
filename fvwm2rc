@@ -124,7 +124,7 @@ Mouse 1 2 A Close
 # Menus
 #############
 ######################## Menus ###################
-AddToMenu RootMenu	"AfterStepClassic" Title
+AddToMenu RootMenu	"HotList" Title
 +			"XTerm"		Exec exec xterm -geometry 80x25 -sl 256 -sb -ls -T 'xterm@AfterStepClassic.org' 
 +			"Firefox"	Exec exec firefox
 +			"Leafpad"	Exec exec leafpad
