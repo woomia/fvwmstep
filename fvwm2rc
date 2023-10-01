@@ -16,8 +16,7 @@ DeskTopSize 1x1
 ################
 #Init functions
 ################
-AddToFunc StartFunction
-+ I Module FvwmButtons Wharf
+
 
 AddToFunc InitFunction
  + I exec xsetroot -solid Steelblue4
@@ -31,7 +30,7 @@ ImagePath $HOME/.fvwm:/usr/local/share/icons:$HOME/.fvwm/icons
 #The Wharf
 ################
 Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
-*Wharf: Geometry 64x576-0+0
+*Wharf: Geometry 64x512-0+0
 *Wharf: Font -adobe-times-bold-r-*-*-12-*-*-*-*-*-*-*
 *Wharf: Rows 15
 *Wharf: Columns 1
@@ -40,8 +39,19 @@ Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
 *Wharf: BoxSize 64x64
 *Wharf: Pixmap tile.xpm
 
-*Wharf: (1x1 Icon 'AfterStep.xpm'
-)
+Module FvwmButtons RollBar
+DestroyModuleConfig RollBar: *
+*RollBar: Fore Black
+*RollBar: Back grey
+*RollBar: Geometry 64x64-0+0
+*RollBar: Rows 1
+*RollBar: Frame 0
+*Rollbar: Pixmap tile.xpm
+
+*RollBar: (1x1, Icon 'AfterStep.xpm', Panel (down, steps 6, delay 10, position module top, indicator 40) "Wharf" 'Module FvwmButtons Wharf')
+
+Style RollBar NoTitle, NoHandles, Sticky, WindowListSkip, \
+	BorderWidth 0, CirculateSkip
 *Wharf: (Swallow(UseOld,NoHint,Respawn) "wmclock" `Exec wmclock -12`)
 )
 *Wharf: (1x1 Icon 'monitor.xpm',\
