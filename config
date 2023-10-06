@@ -17,7 +17,7 @@ DeskTopSize 1x1
 #Init functions
 ################
 AddToFunc StartFunction
-
++ I Module FvwmAnimate
 
 AddToFunc InitFunction
  + I exec xsetroot -solid Steelblue4
@@ -40,6 +40,9 @@ Style "Wharf" NoTitle, !Handles, !Borders, StaysOnBottom
 *Wharf: BoxSize 64x64
 *Wharf: Pixmap tile.xpm
 
+##############
+# This collapses the Wharf into the AS Classic Logo.
+###############
 Module FvwmButtons RollBar
 DestroyModuleConfig RollBar: *
 *RollBar: Fore Black
@@ -217,7 +220,14 @@ DestroyFunc DeiconifyAndRearrange
  AddToFunc DeiconifyAndRearrange
   + C Iconify off
   + C All (CurrentPage, Iconic) PlaceAgain Icon
-
+###################
+# This is the animation for iconifying/deiconifying icons. Season to taste.
+###################
+*FvwmAnimate: Effect Zoom3D
+*FvwmAnimate: Iterations 7
+*FvwmAnimate: Delay 1
+*FvwmAnimate: Width 0
+*FvwmAnimate: Twist 1
 
 
 
