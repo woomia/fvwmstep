@@ -16,7 +16,8 @@ DeskTopSize 1x1
 ################
 #Init functions
 ################
-
+AddToFunc StartFunction
++ I Module FvwmAnimate
 
 AddToFunc InitFunction
  + I exec xsetroot -solid Steelblue4
@@ -218,6 +219,14 @@ DestroyFunc DeiconifyAndRearrange
   + C All (CurrentPage, Iconic) PlaceAgain Icon
 
 
+###################
+# This is the animation for iconifying/deiconifying icons. Season to taste.
+###################
+*FvwmAnimate: Effect Zoom3D
+*FvwmAnimate: Iterations 7
+*FvwmAnimate: Delay 1
+*FvwmAnimate: Width 0
+*FvwmAnimate: Twist 1
 
 
 
