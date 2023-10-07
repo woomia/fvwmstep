@@ -7,8 +7,9 @@
 7. Animate minimizing/unminimizing icons -- Done
 
 For 1.1b5/1.1
-1, Justify HotList to the left.
+1, Justify HotList to the left. -- Not possible
 2. Update front page with AfterStep Manifesto and latest change note.
+3. Enable menu pining ala Window Maker
 
 
 Sometime in a mysterious future release:
@@ -16,3 +17,10 @@ Sometime in a mysterious future release:
 2. Custom default wallpaper.
 3. Drawers on the Wharf? -- Not possible.
 5. Changelog updated for each release. -- Done
+
+Things done so far to enable an AfterStep Classic root menu:
+Colorset 0 fg #ffffff, bg #000044
+MenuStyle * TitleFont -adobe-helvetica-bold-r-*-*-12-*-*-*-*-*-*-*
+MenuStyle * HilightBack white
+MenuStyle * TitleColorset 0, HilightTitleBack
+MenuStyle * Hilight3DThickness 3
